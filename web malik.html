@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bisnis Keren - Pemesanan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <img src="img/img/png.jpg" alt="Logo Bisnis" class="logo">
+    <h1>🌟 Malik SHOP 🌟</h1>
+    <p class="tagline">Pesan produk kreatif kami sekarang juga!</p>
+  </header>
+
+  <!-- GALERI -->
+  <section class="gallery">
+    <h2>Galeri Produk</h2>
+    <div class="gallery-grid">
+      <img src="img/produk1.jpg " alt="Produk 1">
+      <img src="img/produk2.jpg" alt="Produk 2">
+      <img src="img/produk3.jpg" alt="Produk 3">
+    </div>
+  </section>
+
+  <!-- FORM PEMESANAN -->
+  <section class="order">
+    <h2>Form Pemesanan</h2>
+    <p>Isi data di bawah ini untuk memesan produk:</p>
+
+    <form id="formOrder">
+      <input type="text" id="nama" placeholder="Nama Anda" required>
+      <input type="text" id="produk" placeholder="Nama Produk" required>
+      <textarea id="pesan" placeholder="Pesan tambahan..." rows="3"></textarea>
+      <button type="submit" id="kirim">Kirim ke WhatsApp</button>
+    </form>
+  </section>
+
+  <!-- KONTAK -->
+  <section class="contact">
+    <h2>Ikuti Kami</h2>
+    <div class="menu">
+      <a href="https://wa.me/6281234567890" target="_blank" class="btn wa">💬 WhatsApp</a>
+      <a href="https://instagram.com/namabisnismu" target="_blank" class="btn ig">📸 Instagram</a>
+      <a href="https://tiktok.com/@namabisnismu" target="_blank" class="btn tt">🎵 TikTok</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© Lixx Shop. All Rights Reserved.</p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    document.getElementById("formOrder").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const nama = document.getElementById("nama").value;
+      const produk = document.getElementById("produk").value;
+      const pesan = document.getElementById("pesan").value;
+
+      // Ganti nomor WA berikut sesuai bisnismu (tanpa tanda +)
+      const nomorWA = "6281234567890";
+
+      const teks = `Halo, saya *${Malik}* ingin memesan produk berikut:%0A🛒 Produk: *${produk}*%0A📩 Pesan: ${pesan}`;
+      const url = `https://wa.me/${nomorWA}?text=${teks}`;
+
+      window.open(url, "_blank");
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  text-align: center;
+}
+
+header {
+  padding: 40px 20px;
+  background: rgba(0,0,0,0.3);
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  animation: fadeIn 1.2s ease;
+}
+
+.tagline {
+  color: #e0f7fa;
+  font-style: italic;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+h2 {
+  color: #ffeb3b;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Form Pemesanan */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+input, textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+}
+
+button {
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  background: #25D366;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #1EBE5D;
+  transform: scale(1.05);
+}
+
+/* Tombol Sosial */
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn {
+  display: block;
+  padding: 12px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.wa {
+  background: #25D366;
+  color: white;
+}
+.ig {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+  color: white;
+}
+.tt {
+  background: #000;
+  color: white;
+  border: 2px solid #25F4EE;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  background: rgba(0,0,0,0.2);
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #c8e6c9;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
